@@ -9,7 +9,7 @@ using RedMango_API.Utility;
 using System.Net;
 using System.Text.Json;
 
-namespace RedMango_API.Controllers
+namespace RedMango_API.Controllers  
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -37,7 +37,7 @@ namespace RedMango_API.Controllers
 
 
                 if (!string.IsNullOrEmpty(userId)){
-                    _response.Result = orderHeaders.Where(u => u.ApplicationUserId == userId);
+                    orderHeaders = orderHeaders.Where(u => u.ApplicationUserId == userId);
                 }
 
                 if (!string.IsNullOrEmpty(searchString))
